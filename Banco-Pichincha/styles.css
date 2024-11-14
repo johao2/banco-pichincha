@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.open-account {
+    background-color: #ffd200;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.login {
+    background-color: #005b96;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Menú de navegación */
+.nav-links {
+    position: fixed;
+    top: 0;
+    left: -200px; /* Inicia fuera de la vista */
+    width: 200px; /* Ancho del panel lateral */
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links ul li {
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+}
+
+/* Mostrar el menú al activar la clase */
+.show-menu {
+    left: 0; /* Despliega el menú */
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    height: 315px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(255, 251, 0);
+}
+
+.carousel-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: white;
+    background-color: rgba(123, 103, 103, 0.222);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 60%;
+}
+
+.carousel-caption h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.carousel-button {
+    background-color: #ffd200;
+    border: none;
+    color: #333;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.carousel-button:hover {
+    background-color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ffd200;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Búsqueda Rápida */
+.search-section {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+.search-section input {
+    width: 70%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-section .search-button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: 1px solid #ffd200;
+    background-color: #ffd200;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.search-section .search-button:hover {
+    background-color: #ffcc00;
+}
+
+/* Productos Destacados */
+.productos {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.productos h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.card .btn {
+    background-color: #ffd200;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.card .btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Promociones */
+.promociones {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.promociones h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.promos {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.promo-card {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.promo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.promo-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.promo-card p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.promo-card .btn {
+    background-color: #ffd200;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.promo-card .btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Testimonios */
+.testimonios {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.testimonios h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 80px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.testimonial-card p:last-child {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    background-color: #005b96;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* Carrusel de Soluciones en Línea */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 16.66%; /* Cada item ocupará un 16.66% del contenedor (6 elementos) */
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flechas de navegación */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control-left {
+    left: 10px;
+}
+
+.carousel-control-right {
+    right: 10px;
+}
+
+/* Carrusel de Consultas Rápidas */
+.carrusel-contenido {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-slide {
+    flex: 0 0 100%; /* Cada slide ocupa el 100% del contenedor */
+    text-align: center;
+    padding: 10px;
+}
+
+.carrusel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Flechas de navegación para el carrusel de Consultas */
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.izquierda {
+    left: 10px;
+}
+
+.derecha {
+    right: 10px;
+}
+
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.3s ease; /* Transición suave para mover los cuadros */
+}
+
+.carousel-item {
+    flex: 0 0 20%; /* Ajustamos a un 18% para que haya espacio suficiente entre los cuadros */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(160, 141, 141, 0.904);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    background-color: #fff; /* Fondo blanco */
+}
+
+.carousel-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    transform: translateY(-5px);
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.carousel-item h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333333;
+}
+
+.carousel-item p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Agregar sombra más abajo al pasar el mouse */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover::after {
+    opacity: 1;
+}
+/* Estilos para Soluciones en Línea */
+.soluciones-en-linea {
+    position: relative;
+    width: 60%;
+    max-width: 900px;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 50px;
+}
+
+.soluciones-en-linea h2 {
+    font-size: 28px;
+font-family: 'Times New Roman', Times, serif;    font-size: normal;
+    color: var(#0f265c);
+    margin-bottom: 20px;
+    line-height: 32px;
+}
+
+.soluciones-slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.solucion {
+    min-width: 300px;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.solucion h3 {
+    font-size: 50px;
+    color: #0070c9; /* Color de ejemplo */
+}
+
+.solucion p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Flechas de navegación */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0070c9;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Animación para los cuadros al navegar */
+.solucion:hover {
+    transform: scale(1.05);
+}
+/* Estilos generales para Consultas Rápidas */
+.consultas-rapidas {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.consultas-rapidas h2 {
+    font-size: 1.5rem;
+    color: #003366;
+    font-weight: bold;
+    margin-right: 1.5rem;
+}
+
+.consulta-item {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Cuadros grandes y juntos con efecto hover */
+.grande {
+    flex: 1;
+    max-width: 200px;
+    margin-right: -0.5rem; /* Para juntar los cuadros */
+}
+
+.resaltar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos del carrusel */
+.carrusel {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.carrusel-contenido {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrusel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carrusel-slide img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.carrusel-slide p {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Flechas de navegación */
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.flecha.izquierda {
+    left: 10px;
+}
+
+.flecha.derecha {
+    right: 10px;
+}
